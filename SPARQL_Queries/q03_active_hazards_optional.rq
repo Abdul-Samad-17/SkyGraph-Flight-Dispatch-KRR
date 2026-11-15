@@ -1,0 +1,17 @@
+PREFIX fd:   <https://krr.example.org/fd/ontology#>
+PREFIX fdr:  <https://krr.example.org/fd/data/>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+
+# CQ12 | OPTIONAL + FILTER | List every hazard with its severity and active flag, and (if any) the segments it affects
+SELECT ?hazard ?type ?severity ?active ?segment
+WHERE {
+  ?h a fd:WeatherHazard ;
+     rdfs:label ?hazard ;
+     fd:hazardType ?type ;
+     fd:severity ?severity ;
+     fd:isActive ?active .
+  OPTIONAL { ?s fd:affectedByHazard ?h . ?s rdfs:label ?segment }
+}
+ORDER BY DESC(?severity) ?hazard ?segment

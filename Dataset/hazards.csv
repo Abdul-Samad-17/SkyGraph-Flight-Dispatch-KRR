@@ -1,0 +1,6 @@
+id,label,hazard_type,severity,active,polygon_lonlat
+STORM-1,Thunderstorm cell Punjab (fictional),Thunderstorm,4,true,"72.0,29.8;74.0,29.8;74.0,31.0;72.0,31.0"
+STORM-2,Thunderstorm line northern Gulf (fictional),Thunderstorm,3,true,"49.5,27.0;52.0,27.0;52.0,29.0;49.5,29.0"
+TURB-3,Moderate turbulence Karakoram (fictional),Turbulence,2,true,"73.5,34.5;76.5,34.5;76.5,36.5;73.5,36.5"
+ASH-4,"Volcanic ash plume Arabian Sea (fictional, expired)",VolcanicAsh,5,false,"66.0,22.0;69.0,22.0;69.0,24.0;66.0,24.0"
+ICE-5,Icing band Hindu Kush (fictional),Icing,3,true,"71.0,34.4;73.0,34.4;73.0,35.5;71.0,35.5"

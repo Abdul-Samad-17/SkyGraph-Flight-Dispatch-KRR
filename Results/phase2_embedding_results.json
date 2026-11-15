@@ -1,0 +1,128 @@
+{
+ "link_prediction": {
+  "entities": 68,
+  "train_edges": 122,
+  "test_edges": 31,
+  "dim": 32,
+  "epochs": 300,
+  "metrics": {
+   "TransE": {
+    "MRR": 0.427,
+    "Hits@1": 0.29,
+    "Hits@3": 0.468,
+    "Hits@10": 0.758,
+    "MeanRank": 7.37,
+    "queries": 62
+   },
+   "Popularity (training degree)": {
+    "MRR": 0.426,
+    "Hits@1": 0.323,
+    "Hits@3": 0.452,
+    "Hits@10": 0.694,
+    "MeanRank": 7.79,
+    "queries": 62
+   },
+   "Geographic nearest": {
+    "MRR": 0.465,
+    "Hits@1": 0.323,
+    "Hits@3": 0.484,
+    "Hits@10": 0.758,
+    "MeanRank": 5.84,
+    "queries": 62
+   },
+   "Random": {
+    "MRR": 0.23,
+    "Hits@1": 0.129,
+    "Hits@3": 0.21,
+    "Hits@10": 0.419,
+    "MeanRank": 12.32,
+    "queries": 62
+   }
+  }
+ },
+ "hybrid_rule_filtering": {
+  "k": 5,
+  "total_suggestions": 1140,
+  "rejected": 544,
+  "rejected_pct": 47.7,
+  "by_aircraft": {
+   "A320-200": {
+    "suggestions": 190,
+    "rejected_by_rules": 70,
+    "rejected_pct": 36.8
+   },
+   "A380-800": {
+    "suggestions": 190,
+    "rejected_by_rules": 80,
+    "rejected_pct": 42.1
+   },
+   "ATR72-600": {
+    "suggestions": 190,
+    "rejected_by_rules": 143,
+    "rejected_pct": 75.3
+   },
+   "B737-800": {
+    "suggestions": 190,
+    "rejected_by_rules": 80,
+    "rejected_pct": 42.1
+   },
+   "B777-300ER": {
+    "suggestions": 190,
+    "rejected_by_rules": 91,
+    "rejected_pct": 47.9
+   },
+   "B787-9": {
+    "suggestions": 190,
+    "rejected_by_rules": 80,
+    "rejected_pct": 42.1
+   }
+  }
+ },
+ "demo_ISB_ATR72": {
+  "from": "ISB",
+  "aircraft": "ATR 72-600",
+  "suggestions": [
+   {
+    "airport": "JED",
+    "transe_score": 1.776,
+    "accepted": false,
+    "reasons": [
+     "distance 3553 km exceeds range 1528 km"
+    ]
+   },
+   {
+    "airport": "SIN",
+    "transe_score": 2.115,
+    "accepted": false,
+    "reasons": [
+     "distance 4829 km exceeds range 1528 km"
+    ]
+   },
+   {
+    "airport": "SHJ",
+    "transe_score": 2.236,
+    "accepted": false,
+    "reasons": [
+     "distance 1908 km exceeds range 1528 km"
+    ]
+   },
+   {
+    "airport": "KWI",
+    "transe_score": 2.43,
+    "accepted": false,
+    "reasons": [
+     "distance 2404 km exceeds range 1528 km"
+    ]
+   },
+   {
+    "airport": "DMM",
+    "transe_score": 2.517,
+    "accepted": false,
+    "reasons": [
+     "distance 2349 km exceeds range 1528 km",
+     "would cross active hazard 'Thunderstorm line northern Gulf (fictional)'"
+    ]
+   }
+  ]
+ }
+}

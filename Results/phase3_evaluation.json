@@ -1,0 +1,206 @@
+{
+ "kg_grounded": [
+  {
+   "id": "E1",
+   "question": "Find an alternate route from Karachi to Dubai for a B737-800",
+   "pass": true,
+   "detail": "gold KHI-UET-DXB 1861.0 km | copilot KHI-UET-DXB 1861.0 km",
+   "validation_passed": true,
+   "answer": "Recommended route for the Boeing 737-800: KHI-UET-DXB (2 legs, 1861 km total, about 2.2 h at cruise). Legs: KHI to UET 595 km; UET to DXB 1266 km. The direct KHI-DXB leg is not allowed: blocked by active zone 'Restricted Zone Alpha (fictional naval exercise area)'. A purely spatial router would pick KHI-DXB (1188 km), which is not allowed: KHI-DXB: blocked by active zone 'Restricted Zone Alpha (fi"
+  },
+  {
+   "id": "E2",
+   "question": "Route from Islamabad to Dubai for an A380",
+   "pass": true,
+   "detail": "gold ISB-DXB 1925.5 km | copilot ISB-DXB 1925.5 km",
+   "validation_passed": true,
+   "answer": "Recommended route for the Airbus A380-800: ISB-DXB (1 leg, 1926 km total, about 2.1 h at cruise). Legs: ISB to DXB 1926 km. Alternatives: ISB-SHJ-DXB (1926 km). Every leg was re-validated against the graph: passed."
+  },
+  {
+   "id": "E3",
+   "question": "Find a route from Islamabad to London for an A320",
+   "pass": true,
+   "detail": "gold ISB-KBL-TAS-IST-LHR 6941.7 km | copilot ISB-KBL-TAS-IST-LHR 6941.7 km",
+   "validation_passed": true,
+   "answer": "Recommended route for the Airbus A320-200: ISB-KBL-TAS-IST-LHR (4 legs, 6942 km total, about 8.4 h at cruise). Legs: ISB to KBL 353 km; KBL to TAS 744 km; TAS to IST 3356 km; IST to LHR 2488 km. The direct ISB-LHR leg is not allowed: blocked by active zone 'Prohibited Zone Bravo (fictional)'. A purely spatial router would pick ISB-LHR (6053 km), which is not allowed: ISB-LHR: blocked by active zon"
+  },
+  {
+   "id": "E4",
+   "question": "Find an alternate route avoiding the thunderstorm from Lahore to Doha for a B787-9",
+   "pass": true,
+   "detail": "gold LHE-FSD-DXB-DOH 2364.6 km | copilot LHE-FSD-DXB-DOH 2364.6 km",
+   "validation_passed": true,
+   "answer": "Recommended route for the Boeing 787-9 Dreamliner: LHE-FSD-DXB-DOH (3 legs, 2365 km total, about 2.6 h at cruise). Legs: LHE to FSD 135 km; FSD to DXB 1852 km; DXB to DOH 378 km. The direct LHE-DOH leg is not allowed: blocked by active hazard 'Thunderstorm cell Punjab (fictional)'. A purely spatial router would pick LHE-DOH (2330 km), which is not allowed: LHE-DOH: blocked by active hazard 'Thunde"
+  },
+  {
+   "id": "E5",
+   "question": "Route from Islamabad to Chitral for an ATR72",
+   "pass": true,
+   "detail": "gold: no feasible route; copilot status=no_route",
+   "validation_passed": true,
+   "answer": "No feasible route from ISB to CJL for the ATR 72-600 after applying all aircraft, airport and airspace constraints. Direct leg problems: blocked by active hazard 'Icing band Hindu Kush (fictional)'. The purely geographic shortest path ISB-CJL (276 km) is rejected: ISB-CJL: blocked by active hazard 'Icing band Hindu Kush (fictional)'."
+  },
+  {
+   "id": "E6",
+   "question": "Route from Islamabad to Gilgit for an ATR72",
+   "pass": true,
+   "detail": "gold: no feasible route; copilot status=no_route",
+   "validation_passed": true,
+   "answer": "Destination airport GIL is not operational."
+  },
+  {
+   "id": "E7",
+   "question": "Find a route from Chitral to Dubai for an A320",
+   "pass": true,
+   "detail": "gold: no feasible route; copilot status=no_route",
+   "validation_passed": true,
+   "answer": "Origin airport CJL cannot handle the Airbus A320-200 (longest runway 1524 m, needs 2100 m)."
+  },
+  {
+   "id": "E8",
+   "question": "Route from Karachi to Islamabad for an ATR72",
+   "pass": true,
+   "detail": "gold KHI-ISB 1108.9 km | copilot KHI-ISB 1108.9 km",
+   "validation_passed": true,
+   "answer": "Recommended route for the ATR 72-600: KHI-ISB (1 leg, 1109 km total, about 2.2 h at cruise). Legs: KHI to ISB 1109 km. Alternatives: KHI-MUX-ISB (1120 km). Every leg was re-validated against the graph: passed."
+  },
+  {
+   "id": "E9",
+   "question": "Diversion candidates for scenario S1",
+   "pass": true,
+   "detail": "gold 18 candidates | copilot 18",
+   "validation_passed": true,
+   "answer": "Scenario S1 (Engine-out diversion: A380 over Arabian Sea, Airbus A380-800, 1500 km remaining): 18 diversion candidates, nearest first: KHI (319 km), MCT (600 km), UET (652 km), SHJ (854 km), DXB (870 km), AMD (902 km), MUX (932 km), AUH (946 km) ...."
+  },
+  {
+   "id": "E10",
+   "question": "Diversion candidates for scenario S6",
+   "pass": true,
+   "detail": "gold 0 candidates | copilot 0",
+   "validation_passed": true,
+   "answer": "Scenario S6 (Edge case: A380 with 300 km remaining over open sea, Airbus A380-800 with 300 km remaining): there is NO suitable, operational airport within range."
+  },
+  {
+   "id": "E11",
+   "question": "Which airports can handle an A380?",
+   "pass": true,
+   "detail": "gold 33 airports | copilot 33",
+   "validation_passed": true,
+   "answer": "33 of 38 airports can handle the Airbus A380-800 (needs a 3000 m runway): DOH (4850 m), DXB (4447 m), DEL (4430 m), CDG (4215 m), RUH (4205 m), IKA (4200 m), KUL (4124 m), AUH (4100 m), IST (4100 m), SHJ (4060 m), BKK (4000 m), DMM (4000 m), FRA (4000 m), JED (4000 m), MCT (4000 m), SIN (4000 m), TAS (4000 m), BAH (3964 m), LHR (3902 m), PEK (3800 m), ATQ (3658 m), ISB (3658 m), AMD (3505 m), KBL "
+  },
+  {
+   "id": "E12",
+   "question": "Why can't an A380 fly Karachi to Dubai direct?",
+   "pass": true,
+   "detail": "gold blocked by ['RZ-ALPHA']",
+   "validation_passed": true,
+   "answer": "The direct segment KHI-DXB (1188 km) is NOT feasible for the Airbus A380-800: blocked by active zone 'Restricted Zone Alpha (fictional naval exercise area)'."
+  }
+ ],
+ "kg_grounded_pass": "12/12",
+ "guard_tests": [
+  {
+   "case": "faithful KG answer",
+   "expected_valid": true,
+   "validator_valid": true,
+   "ok": true,
+   "problems": []
+  },
+  {
+   "case": "direct blocked leg presented as valid",
+   "expected_valid": false,
+   "validator_valid": false,
+   "ok": true,
+   "problems": [
+    "route KHI-DXB is not feasible: KHI-DXB: blocked by active zone 'Restricted Zone Alpha (fictional naval exercise area)'"
+   ]
+  },
+  {
+   "case": "airport not in evidence",
+   "expected_valid": false,
+   "validator_valid": false,
+   "ok": true,
+   "problems": [
+    "airport LHR is not supported by the retrieved evidence"
+   ]
+  },
+  {
+   "case": "invented distance",
+   "expected_valid": false,
+   "validator_valid": false,
+   "ok": true,
+   "problems": [
+    "number 5000 is not in the retrieved evidence"
+   ]
+  },
+  {
+   "case": "route that does not exist",
+   "expected_valid": false,
+   "validator_valid": false,
+   "ok": true,
+   "problems": [
+    "airport BKK is not supported by the retrieved evidence",
+    "route KHI-BKK-DXB is not feasible: no route segment KHI-BKK exists; BKK-DXB: blocked by active zone 'Restricted Zone Alpha (fictional naval exercise area)'"
+   ]
+  },
+  {
+   "case": "leg beyond ATR range presented as valid",
+   "expected_valid": false,
+   "validator_valid": false,
+   "ok": true,
+   "problems": [
+    "route ISB-DXB is not feasible: ISB-DXB: distance 1926 km exceeds the ATR 72-600 maximum range of 1528 km"
+   ]
+  }
+ ],
+ "llm_only": [
+  {
+   "id": "E1",
+   "status": "NOT RUN (set ANTHROPIC_API_KEY to run the LLM-only baseline)"
+  },
+  {
+   "id": "E2",
+   "status": "NOT RUN (set ANTHROPIC_API_KEY to run the LLM-only baseline)"
+  },
+  {
+   "id": "E3",
+   "status": "NOT RUN (set ANTHROPIC_API_KEY to run the LLM-only baseline)"
+  },
+  {
+   "id": "E4",
+   "status": "NOT RUN (set ANTHROPIC_API_KEY to run the LLM-only baseline)"
+  },
+  {
+   "id": "E5",
+   "status": "NOT RUN (set ANTHROPIC_API_KEY to run the LLM-only baseline)"
+  },
+  {
+   "id": "E6",
+   "status": "NOT RUN (set ANTHROPIC_API_KEY to run the LLM-only baseline)"
+  },
+  {
+   "id": "E7",
+   "status": "NOT RUN (set ANTHROPIC_API_KEY to run the LLM-only baseline)"
+  },
+  {
+   "id": "E8",
+   "status": "NOT RUN (set ANTHROPIC_API_KEY to run the LLM-only baseline)"
+  },
+  {
+   "id": "E9",
+   "status": "NOT RUN (set ANTHROPIC_API_KEY to run the LLM-only baseline)"
+  },
+  {
+   "id": "E10",
+   "status": "NOT RUN (set ANTHROPIC_API_KEY to run the LLM-only baseline)"
+  },
+  {
+   "id": "E11",
+   "status": "NOT RUN (set ANTHROPIC_API_KEY to run the LLM-only baseline)"
+  },
+  {
+   "id": "E12",
+   "status": "NOT RUN (set ANTHROPIC_API_KEY to run the LLM-only baseline)"
+  }
+ ]
+}

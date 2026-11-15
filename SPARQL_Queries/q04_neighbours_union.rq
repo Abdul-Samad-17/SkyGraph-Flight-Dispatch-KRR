@@ -1,0 +1,16 @@
+PREFIX fd:   <https://krr.example.org/fd/ontology#>
+PREFIX fdr:  <https://krr.example.org/fd/data/>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+
+# CQ9a | UNION | Which airports are directly connected to Islamabad (segments are stored undirected, so both directions are checked)?
+SELECT DISTINCT ?iata ?distance
+WHERE {
+  { ?s fd:connectsFrom fdr:airport-OPIS ; fd:connectsTo ?n }
+  UNION
+  { ?s fd:connectsTo fdr:airport-OPIS ; fd:connectsFrom ?n }
+  ?s fd:distanceKm ?distance .
+  ?n fd:iataCode ?iata .
+}
+ORDER BY ?distance

@@ -1,0 +1,14 @@
+PREFIX fd:   <https://krr.example.org/fd/ontology#>
+PREFIX fdr:  <https://krr.example.org/fd/data/>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+
+# CQ10 | INFERENCE (R5) | Diversion candidates for scenario S1 (A380, 1500 km remaining), nearest first
+SELECT ?iata ?name ?distance
+WHERE {
+  fdr:scenario-S1 fd:hasDiversionCandidate ?a .
+  ?a fd:iataCode ?iata ; rdfs:label ?name .
+  ?pd fd:ofScenario fdr:scenario-S1 ; fd:toAirport ?a ; fd:distanceKm ?distance .
+}
+ORDER BY ?distance

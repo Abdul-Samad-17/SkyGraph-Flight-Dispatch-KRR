@@ -1,0 +1,18 @@
+PREFIX fd:   <https://krr.example.org/fd/ontology#>
+PREFIX fdr:  <https://krr.example.org/fd/data/>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+
+# CQ1 | basic graph pattern | Which airports are in Pakistan and what are their codes and coordinates?
+SELECT ?iata ?icao ?name ?lat ?lon
+WHERE {
+  ?a a fd:Airport ;
+     fd:locatedIn fdr:country-PK ;
+     fd:iataCode ?iata ;
+     fd:icaoCode ?icao ;
+     rdfs:label ?name ;
+     fd:latitude ?lat ;
+     fd:longitude ?lon .
+}
+ORDER BY ?iata

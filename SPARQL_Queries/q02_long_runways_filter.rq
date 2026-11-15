@@ -1,0 +1,16 @@
+PREFIX fd:   <https://krr.example.org/fd/ontology#>
+PREFIX fdr:  <https://krr.example.org/fd/data/>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+
+# CQ2 | FILTER | Which runways are longer than 3,500 m, and at which airport?
+SELECT ?iata ?designator ?length
+WHERE {
+  ?a fd:hasRunway ?r ;
+     fd:iataCode ?iata .
+  ?r fd:designator ?designator ;
+     fd:runwayLengthM ?length .
+  FILTER (?length > 3500)
+}
+ORDER BY DESC(?length) ?iata

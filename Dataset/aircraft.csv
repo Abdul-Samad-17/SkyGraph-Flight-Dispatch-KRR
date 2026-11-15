@@ -1,0 +1,7 @@
+id,label,icao_type,class,range_km,min_runway_m,cruise_kmh
+A380-800,Airbus A380-800,A388,Widebody,15200,3000,903
+B777-300ER,Boeing 777-300ER,B77W,Widebody,13650,3050,905
+B787-9,Boeing 787-9 Dreamliner,B789,Widebody,14010,2800,903
+A320-200,Airbus A320-200,A320,Narrowbody,6150,2100,828
+B737-800,Boeing 737-800,B738,Narrowbody,5436,2300,842
+ATR72-600,ATR 72-600,AT76,Turboprop,1528,1333,510

@@ -1,0 +1,17 @@
+PREFIX fd:   <https://krr.example.org/fd/ontology#>
+PREFIX fdr:  <https://krr.example.org/fd/data/>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+
+# CQ9 | PROPERTY PATH (sequence) + INFERENCE | Airports exactly two hops from Islamabad that can take an A380 (needs symmetric reasoning on fd:connectedTo)
+SELECT DISTINCT ?iata ?country
+WHERE {
+  fdr:airport-OPIS fd:connectedTo/fd:connectedTo ?x .
+  ?x fd:isSuitableFor fdr:aircraft-A380-800 ;
+     fd:iataCode ?iata ;
+     fd:locatedIn ?c .
+  ?c rdfs:label ?country .
+  FILTER (?x != fdr:airport-OPIS)
+}
+ORDER BY ?country ?iata

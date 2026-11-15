@@ -1,0 +1,17 @@
+PREFIX fd:   <https://krr.example.org/fd/ontology#>
+PREFIX fdr:  <https://krr.example.org/fd/data/>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+
+# CQ7 | MULTI-HOP + INFERENCE (R4) | Two-leg routes Islamabad -> Dubai for the A380 where BOTH legs are feasible
+SELECT ?via ?d1 ?d2 (?d1 + ?d2 AS ?total)
+WHERE {
+  ?s1 fd:isFeasibleFor fdr:aircraft-A380-800 ; fd:distanceKm ?d1 .
+  ?s2 fd:isFeasibleFor fdr:aircraft-A380-800 ; fd:distanceKm ?d2 .
+  { ?s1 fd:connectsFrom fdr:airport-OPIS ; fd:connectsTo ?m } UNION { ?s1 fd:connectsTo fdr:airport-OPIS ; fd:connectsFrom ?m }
+  { ?s2 fd:connectsFrom ?m ; fd:connectsTo fdr:airport-OMDB } UNION { ?s2 fd:connectsTo ?m ; fd:connectsFrom fdr:airport-OMDB }
+  FILTER (?s1 != ?s2)
+  ?m fd:iataCode ?via .
+}
+ORDER BY ?total

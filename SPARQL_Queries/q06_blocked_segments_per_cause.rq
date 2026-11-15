@@ -1,0 +1,14 @@
+PREFIX fd:   <https://krr.example.org/fd/ontology#>
+PREFIX fdr:  <https://krr.example.org/fd/data/>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+
+# CQ5/CQ12 | INFERENCE (R2) + aggregation | How many segments does each active zone/hazard block?
+SELECT ?cause ?label (COUNT(DISTINCT ?s) AS ?blockedSegments)
+WHERE {
+  ?s fd:blockedBy ?cause .
+  ?cause rdfs:label ?label .
+}
+GROUP BY ?cause ?label
+ORDER BY DESC(?blockedSegments) ?label

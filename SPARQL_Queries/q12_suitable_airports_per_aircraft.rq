@@ -1,0 +1,14 @@
+PREFIX fd:   <https://krr.example.org/fd/ontology#>
+PREFIX fdr:  <https://krr.example.org/fd/data/>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+
+# CQ4 | INFERENCE (R0+R1) + aggregation | How many airports are suitable for each aircraft type?
+SELECT ?aircraft ?minRunway (COUNT(DISTINCT ?a) AS ?suitableAirports)
+WHERE {
+  ?a fd:isSuitableFor ?ac .
+  ?ac rdfs:label ?aircraft ; fd:minRunwayM ?minRunway .
+}
+GROUP BY ?aircraft ?minRunway
+ORDER BY DESC(?minRunway)

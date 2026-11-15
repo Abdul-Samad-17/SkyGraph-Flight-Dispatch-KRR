@@ -1,0 +1,1227 @@
+[
+ {
+  "segment": "OPIS-OPKC",
+  "label": "ISB-KHI",
+  "distance_km": 1108.9,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "OPIS-OPLA",
+  "label": "ISB-LHE",
+  "distance_km": 269.4,
+  "zones": [
+   "AZ-DELTA"
+  ],
+  "hazards": []
+ },
+ {
+  "segment": "OPIS-OPPS",
+  "label": "ISB-PEW",
+  "distance_km": 132.6,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "OPIS-OPMT",
+  "label": "ISB-MUX",
+  "distance_km": 397.1,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "OPIS-OPQT",
+  "label": "ISB-UET",
+  "distance_km": 668.4,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "OPIS-OPSD",
+  "label": "ISB-KDU",
+  "distance_km": 315.5,
+  "zones": [
+   "AZ-DELTA"
+  ],
+  "hazards": [
+   "TURB-3"
+  ]
+ },
+ {
+  "segment": "OPIS-OPGT",
+  "label": "ISB-GIL",
+  "distance_km": 295.1,
+  "zones": [
+   "AZ-DELTA"
+  ],
+  "hazards": [
+   "TURB-3"
+  ]
+ },
+ {
+  "segment": "OPIS-OPFA",
+  "label": "ISB-FSD",
+  "distance_km": 244.5,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "OPIS-OPCH",
+  "label": "ISB-CJL",
+  "distance_km": 275.9,
+  "zones": [],
+  "hazards": [
+   "ICE-5"
+  ]
+ },
+ {
+  "segment": "OPLA-OPKC",
+  "label": "LHE-KHI",
+  "distance_km": 1021.5,
+  "zones": [],
+  "hazards": [
+   "STORM-1"
+  ]
+ },
+ {
+  "segment": "OPLA-OPMT",
+  "label": "LHE-MUX",
+  "distance_km": 320.4,
+  "zones": [],
+  "hazards": [
+   "STORM-1"
+  ]
+ },
+ {
+  "segment": "OPLA-OPFA",
+  "label": "LHE-FSD",
+  "distance_km": 134.8,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "OPKC-OPQT",
+  "label": "KHI-UET",
+  "distance_km": 594.7,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "OPKC-OPMT",
+  "label": "KHI-MUX",
+  "distance_km": 723.1,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "OPKC-OPPS",
+  "label": "KHI-PEW",
+  "distance_km": 1094.5,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "OPKC-OPFA",
+  "label": "KHI-FSD",
+  "distance_km": 917.8,
+  "zones": [],
+  "hazards": [
+   "STORM-1"
+  ]
+ },
+ {
+  "segment": "OPPS-OPCH",
+  "label": "PEW-CJL",
+  "distance_km": 212.1,
+  "zones": [],
+  "hazards": [
+   "ICE-5"
+  ]
+ },
+ {
+  "segment": "OPSD-OPGT",
+  "label": "KDU-GIL",
+  "distance_km": 126.6,
+  "zones": [
+   "AZ-DELTA"
+  ],
+  "hazards": [
+   "TURB-3"
+  ]
+ },
+ {
+  "segment": "OPQT-OPMT",
+  "label": "UET-MUX",
+  "distance_km": 430.6,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "OPIS-OMDB",
+  "label": "ISB-DXB",
+  "distance_km": 1925.5,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "OPIS-OMAA",
+  "label": "ISB-AUH",
+  "distance_km": 2035.8,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "OPIS-OTHH",
+  "label": "ISB-DOH",
+  "distance_km": 2248.7,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "OPIS-OEJN",
+  "label": "ISB-JED",
+  "distance_km": 3553.0,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "OPIS-OERK",
+  "label": "ISB-RUH",
+  "distance_km": 2702.0,
+  "zones": [
+   "RZ-CHARLIE"
+  ],
+  "hazards": []
+ },
+ {
+  "segment": "OPIS-OOMS",
+  "label": "ISB-MCT",
+  "distance_km": 1799.9,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "OPIS-OMSJ",
+  "label": "ISB-SHJ",
+  "distance_km": 1908.0,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "OPLA-OMDB",
+  "label": "LHE-DXB",
+  "distance_km": 1985.2,
+  "zones": [],
+  "hazards": [
+   "STORM-1"
+  ]
+ },
+ {
+  "segment": "OPLA-OMAA",
+  "label": "LHE-AUH",
+  "distance_km": 2089.6,
+  "zones": [],
+  "hazards": [
+   "STORM-1"
+  ]
+ },
+ {
+  "segment": "OPLA-OMSJ",
+  "label": "LHE-SHJ",
+  "distance_km": 1967.7,
+  "zones": [],
+  "hazards": [
+   "STORM-1"
+  ]
+ },
+ {
+  "segment": "OPLA-OTHH",
+  "label": "LHE-DOH",
+  "distance_km": 2330.3,
+  "zones": [],
+  "hazards": [
+   "STORM-1"
+  ]
+ },
+ {
+  "segment": "OPLA-OEJN",
+  "label": "LHE-JED",
+  "distance_km": 3653.2,
+  "zones": [],
+  "hazards": [
+   "STORM-1"
+  ]
+ },
+ {
+  "segment": "OPLA-OERK",
+  "label": "LHE-RUH",
+  "distance_km": 2801.9,
+  "zones": [],
+  "hazards": [
+   "STORM-1"
+  ]
+ },
+ {
+  "segment": "OPKC-OMDB",
+  "label": "KHI-DXB",
+  "distance_km": 1188.3,
+  "zones": [
+   "RZ-ALPHA"
+  ],
+  "hazards": []
+ },
+ {
+  "segment": "OPKC-OMAA",
+  "label": "KHI-AUH",
+  "distance_km": 1264.7,
+  "zones": [
+   "RZ-ALPHA"
+  ],
+  "hazards": []
+ },
+ {
+  "segment": "OPKC-OMSJ",
+  "label": "KHI-SHJ",
+  "distance_km": 1172.9,
+  "zones": [
+   "RZ-ALPHA"
+  ],
+  "hazards": []
+ },
+ {
+  "segment": "OPKC-OTHH",
+  "label": "KHI-DOH",
+  "distance_km": 1565.9,
+  "zones": [
+   "RZ-ALPHA"
+  ],
+  "hazards": []
+ },
+ {
+  "segment": "OPKC-OBBI",
+  "label": "KHI-BAH",
+  "distance_km": 1663.3,
+  "zones": [
+   "RZ-ALPHA"
+  ],
+  "hazards": []
+ },
+ {
+  "segment": "OPKC-OKBK",
+  "label": "KHI-KWI",
+  "distance_km": 1957.5,
+  "zones": [
+   "RZ-CHARLIE"
+  ],
+  "hazards": [
+   "STORM-2"
+  ]
+ },
+ {
+  "segment": "OPKC-OOMS",
+  "label": "KHI-MCT",
+  "distance_km": 911.5,
+  "zones": [
+   "RZ-ALPHA"
+  ],
+  "hazards": []
+ },
+ {
+  "segment": "OPKC-OEJN",
+  "label": "KHI-JED",
+  "distance_km": 2877.5,
+  "zones": [
+   "RZ-ALPHA"
+  ],
+  "hazards": []
+ },
+ {
+  "segment": "OPKC-OEDF",
+  "label": "KHI-DMM",
+  "distance_km": 1747.2,
+  "zones": [
+   "RZ-ALPHA"
+  ],
+  "hazards": []
+ },
+ {
+  "segment": "OPKC-OERK",
+  "label": "KHI-RUH",
+  "distance_km": 2061.3,
+  "zones": [
+   "RZ-ALPHA"
+  ],
+  "hazards": []
+ },
+ {
+  "segment": "OPMT-OMDB",
+  "label": "MUX-DXB",
+  "distance_km": 1671.4,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "OPMT-OMSJ",
+  "label": "MUX-SHJ",
+  "distance_km": 1654.0,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "OPPS-OMDB",
+  "label": "PEW-DXB",
+  "distance_km": 1835.3,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "OPPS-OMSJ",
+  "label": "PEW-SHJ",
+  "distance_km": 1817.9,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "OPFA-OMDB",
+  "label": "FSD-DXB",
+  "distance_km": 1852.1,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "OPFA-OMSJ",
+  "label": "FSD-SHJ",
+  "distance_km": 1834.6,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "OPQT-OMDB",
+  "label": "UET-DXB",
+  "distance_km": 1266.3,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "OMDB-OMAA",
+  "label": "DXB-AUH",
+  "distance_km": 116.1,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "OMDB-OMSJ",
+  "label": "DXB-SHJ",
+  "distance_km": 17.5,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "OMDB-OTHH",
+  "label": "DXB-DOH",
+  "distance_km": 377.7,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "OMDB-OBBI",
+  "label": "DXB-BAH",
+  "distance_km": 487.1,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "OMDB-OKBK",
+  "label": "DXB-KWI",
+  "distance_km": 854.0,
+  "zones": [
+   "RZ-CHARLIE"
+  ],
+  "hazards": [
+   "STORM-2"
+  ]
+ },
+ {
+  "segment": "OMDB-OOMS",
+  "label": "DXB-MCT",
+  "distance_km": 348.5,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "OMDB-OEJN",
+  "label": "DXB-JED",
+  "distance_km": 1699.0,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "OMDB-OERK",
+  "label": "DXB-RUH",
+  "distance_km": 873.0,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "OMDB-OEDF",
+  "label": "DXB-DMM",
+  "distance_km": 573.2,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "OMAA-OTHH",
+  "label": "AUH-DOH",
+  "distance_km": 320.9,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "OMAA-OOMS",
+  "label": "AUH-MCT",
+  "distance_km": 380.7,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "OMAA-OERK",
+  "label": "AUH-RUH",
+  "distance_km": 805.4,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "OTHH-OBBI",
+  "label": "DOH-BAH",
+  "distance_km": 147.7,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "OTHH-OKBK",
+  "label": "DOH-KWI",
+  "distance_km": 568.0,
+  "zones": [
+   "RZ-CHARLIE"
+  ],
+  "hazards": [
+   "STORM-2"
+  ]
+ },
+ {
+  "segment": "OTHH-OEJN",
+  "label": "DOH-JED",
+  "distance_km": 1330.6,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "OTHH-OERK",
+  "label": "DOH-RUH",
+  "distance_km": 495.5,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "OTHH-OEDF",
+  "label": "DOH-DMM",
+  "distance_km": 224.8,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "OTHH-OOMS",
+  "label": "DOH-MCT",
+  "distance_km": 701.1,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "OBBI-OKBK",
+  "label": "BAH-KWI",
+  "distance_km": 420.4,
+  "zones": [
+   "RZ-CHARLIE"
+  ],
+  "hazards": [
+   "STORM-2"
+  ]
+ },
+ {
+  "segment": "OBBI-OEDF",
+  "label": "BAH-DMM",
+  "distance_km": 86.2,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "OKBK-OEDF",
+  "label": "KWI-DMM",
+  "distance_km": 355.2,
+  "zones": [
+   "RZ-CHARLIE"
+  ],
+  "hazards": []
+ },
+ {
+  "segment": "OKBK-OERK",
+  "label": "KWI-RUH",
+  "distance_km": 491.0,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "OERK-OEJN",
+  "label": "RUH-JED",
+  "distance_km": 851.8,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "OERK-OEDF",
+  "label": "RUH-DMM",
+  "distance_km": 353.1,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "OMDB-LTFM",
+  "label": "DXB-IST",
+  "distance_km": 3028.3,
+  "zones": [
+   "RZ-CHARLIE"
+  ],
+  "hazards": [
+   "STORM-2"
+  ]
+ },
+ {
+  "segment": "OTHH-LTFM",
+  "label": "DOH-IST",
+  "distance_km": 2755.9,
+  "zones": [
+   "RZ-CHARLIE"
+  ],
+  "hazards": []
+ },
+ {
+  "segment": "OEJN-LTFM",
+  "label": "JED-IST",
+  "distance_km": 2387.5,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "OKBK-LTFM",
+  "label": "KWI-IST",
+  "distance_km": 2191.4,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "OMDB-EGLL",
+  "label": "DXB-LHR",
+  "distance_km": 5497.4,
+  "zones": [
+   "RZ-CHARLIE"
+  ],
+  "hazards": [
+   "STORM-2"
+  ]
+ },
+ {
+  "segment": "OTHH-EGLL",
+  "label": "DOH-LHR",
+  "distance_km": 5240.9,
+  "zones": [
+   "RZ-CHARLIE"
+  ],
+  "hazards": []
+ },
+ {
+  "segment": "OMDB-EDDF",
+  "label": "DXB-FRA",
+  "distance_km": 4843.9,
+  "zones": [
+   "RZ-CHARLIE"
+  ],
+  "hazards": [
+   "STORM-2"
+  ]
+ },
+ {
+  "segment": "OTHH-EDDF",
+  "label": "DOH-FRA",
+  "distance_km": 4588.3,
+  "zones": [
+   "RZ-CHARLIE"
+  ],
+  "hazards": []
+ },
+ {
+  "segment": "OMDB-LFPG",
+  "label": "DXB-CDG",
+  "distance_km": 5238.7,
+  "zones": [
+   "RZ-CHARLIE"
+  ],
+  "hazards": [
+   "STORM-2"
+  ]
+ },
+ {
+  "segment": "OTHH-LFPG",
+  "label": "DOH-CDG",
+  "distance_km": 4969.3,
+  "zones": [
+   "RZ-CHARLIE"
+  ],
+  "hazards": []
+ },
+ {
+  "segment": "OMAA-EGLL",
+  "label": "AUH-LHR",
+  "distance_km": 5516.1,
+  "zones": [
+   "RZ-CHARLIE"
+  ],
+  "hazards": []
+ },
+ {
+  "segment": "LTFM-EGLL",
+  "label": "IST-LHR",
+  "distance_km": 2488.3,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "LTFM-EDDF",
+  "label": "IST-FRA",
+  "distance_km": 1838.1,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "LTFM-LFPG",
+  "label": "IST-CDG",
+  "distance_km": 2213.7,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "EGLL-EDDF",
+  "label": "LHR-FRA",
+  "distance_km": 653.5,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "EGLL-LFPG",
+  "label": "LHR-CDG",
+  "distance_km": 347.0,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "EDDF-LFPG",
+  "label": "FRA-CDG",
+  "distance_km": 448.8,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "OPKC-LTFM",
+  "label": "KHI-IST",
+  "distance_km": 3971.1,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "OPIS-LTFM",
+  "label": "ISB-IST",
+  "distance_km": 3944.0,
+  "zones": [
+   "PZ-BRAVO"
+  ],
+  "hazards": []
+ },
+ {
+  "segment": "OPIS-EGLL",
+  "label": "ISB-LHR",
+  "distance_km": 6053.3,
+  "zones": [
+   "PZ-BRAVO"
+  ],
+  "hazards": []
+ },
+ {
+  "segment": "OPLA-EGLL",
+  "label": "LHE-LHR",
+  "distance_km": 6314.8,
+  "zones": [
+   "PZ-BRAVO"
+  ],
+  "hazards": []
+ },
+ {
+  "segment": "OPKC-EGLL",
+  "label": "KHI-LHR",
+  "distance_km": 6338.3,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "VIDP-OMDB",
+  "label": "DEL-DXB",
+  "distance_km": 2183.2,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "VABB-OMDB",
+  "label": "BOM-DXB",
+  "distance_km": 1926.2,
+  "zones": [
+   "RZ-ALPHA"
+  ],
+  "hazards": []
+ },
+ {
+  "segment": "VAAH-OMDB",
+  "label": "AMD-DXB",
+  "distance_km": 1767.4,
+  "zones": [
+   "RZ-ALPHA"
+  ],
+  "hazards": [
+   "ASH-4"
+  ]
+ },
+ {
+  "segment": "VIJP-OMDB",
+  "label": "JAI-DXB",
+  "distance_km": 2048.2,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "VIAR-OMDB",
+  "label": "ATQ-DXB",
+  "distance_km": 2026.8,
+  "zones": [],
+  "hazards": [
+   "STORM-1"
+  ]
+ },
+ {
+  "segment": "VIDP-OTHH",
+  "label": "DEL-DOH",
+  "distance_km": 2548.9,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "VABB-OTHH",
+  "label": "BOM-DOH",
+  "distance_km": 2291.3,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "VIDP-OMAA",
+  "label": "DEL-AUH",
+  "distance_km": 2277.0,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "VABB-OMAA",
+  "label": "BOM-AUH",
+  "distance_km": 1970.9,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "VIDP-EGLL",
+  "label": "DEL-LHR",
+  "distance_km": 6731.4,
+  "zones": [
+   "PZ-BRAVO"
+  ],
+  "hazards": [
+   "STORM-1"
+  ]
+ },
+ {
+  "segment": "VABB-EGLL",
+  "label": "BOM-LHR",
+  "distance_km": 7212.5,
+  "zones": [
+   "RZ-ALPHA",
+   "RZ-CHARLIE"
+  ],
+  "hazards": [
+   "STORM-2",
+   "ASH-4"
+  ]
+ },
+ {
+  "segment": "VIDP-EDDF",
+  "label": "DEL-FRA",
+  "distance_km": 6121.7,
+  "zones": [
+   "PZ-BRAVO"
+  ],
+  "hazards": [
+   "STORM-1"
+  ]
+ },
+ {
+  "segment": "VIDP-VTBS",
+  "label": "DEL-BKK",
+  "distance_km": 2947.8,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "VIDP-WSSS",
+  "label": "DEL-SIN",
+  "distance_km": 4157.5,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "VABB-WSSS",
+  "label": "BOM-SIN",
+  "distance_km": 3920.7,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "VIDP-VGHS",
+  "label": "DEL-DAC",
+  "distance_km": 1425.3,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "VIDP-VCBI",
+  "label": "DEL-CMB",
+  "distance_km": 2394.8,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "VABB-VCBI",
+  "label": "BOM-CMB",
+  "distance_km": 1525.8,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "VIDP-VABB",
+  "label": "DEL-BOM",
+  "distance_km": 1137.1,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "VIDP-VAAH",
+  "label": "DEL-AMD",
+  "distance_km": 755.4,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "VIDP-VIJP",
+  "label": "DEL-JAI",
+  "distance_km": 230.6,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "VIDP-VIAR",
+  "label": "DEL-ATQ",
+  "distance_km": 414.7,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "VABB-VAAH",
+  "label": "BOM-AMD",
+  "distance_km": 444.2,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "VIDP-OAKB",
+  "label": "DEL-KBL",
+  "distance_km": 1001.9,
+  "zones": [],
+  "hazards": [
+   "STORM-1"
+  ]
+ },
+ {
+  "segment": "OMDB-VTBS",
+  "label": "DXB-BKK",
+  "distance_km": 4903.6,
+  "zones": [
+   "RZ-ALPHA"
+  ],
+  "hazards": [
+   "ASH-4"
+  ]
+ },
+ {
+  "segment": "OMDB-WSSS",
+  "label": "DXB-SIN",
+  "distance_km": 5845.6,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "OMDB-WMKK",
+  "label": "DXB-KUL",
+  "distance_km": 5549.2,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "OMDB-ZBAA",
+  "label": "DXB-PEK",
+  "distance_km": 5846.6,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "OMDB-VGHS",
+  "label": "DXB-DAC",
+  "distance_km": 3536.9,
+  "zones": [
+   "RZ-ALPHA"
+  ],
+  "hazards": []
+ },
+ {
+  "segment": "OMDB-VCBI",
+  "label": "DXB-CMB",
+  "distance_km": 3288.2,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "OTHH-VTBS",
+  "label": "DOH-BKK",
+  "distance_km": 5279.9,
+  "zones": [
+   "RZ-ALPHA"
+  ],
+  "hazards": []
+ },
+ {
+  "segment": "OTHH-WSSS",
+  "label": "DOH-SIN",
+  "distance_km": 6205.6,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "OTHH-WMKK",
+  "label": "DOH-KUL",
+  "distance_km": 5909.3,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "VTBS-WSSS",
+  "label": "BKK-SIN",
+  "distance_km": 1416.2,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "VTBS-WMKK",
+  "label": "BKK-KUL",
+  "distance_km": 1221.5,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "WSSS-WMKK",
+  "label": "SIN-KUL",
+  "distance_km": 296.4,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "VTBS-ZBAA",
+  "label": "BKK-PEK",
+  "distance_km": 3316.8,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "WSSS-ZBAA",
+  "label": "SIN-PEK",
+  "distance_km": 4489.6,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "WMKK-ZBAA",
+  "label": "KUL-PEK",
+  "distance_km": 4414.1,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "VGHS-VTBS",
+  "label": "DAC-BKK",
+  "distance_km": 1567.8,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "VCBI-WSSS",
+  "label": "CMB-SIN",
+  "distance_km": 2749.1,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "VCBI-WMKK",
+  "label": "CMB-KUL",
+  "distance_km": 2466.9,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "OPIS-ZBAA",
+  "label": "ISB-PEK",
+  "distance_km": 3921.2,
+  "zones": [
+   "AZ-DELTA"
+  ],
+  "hazards": []
+ },
+ {
+  "segment": "OPIS-WMKK",
+  "label": "ISB-KUL",
+  "distance_km": 4551.7,
+  "zones": [
+   "AZ-DELTA"
+  ],
+  "hazards": []
+ },
+ {
+  "segment": "OPIS-VTBS",
+  "label": "ISB-BKK",
+  "distance_km": 3578.4,
+  "zones": [
+   "AZ-DELTA"
+  ],
+  "hazards": []
+ },
+ {
+  "segment": "OPIS-OAKB",
+  "label": "ISB-KBL",
+  "distance_km": 353.4,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "OPIS-UTTT",
+  "label": "ISB-TAS",
+  "distance_km": 911.9,
+  "zones": [],
+  "hazards": [
+   "ICE-5"
+  ]
+ },
+ {
+  "segment": "OPPS-OAKB",
+  "label": "PEW-KBL",
+  "distance_km": 220.9,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "OAKB-OMDB",
+  "label": "KBL-DXB",
+  "distance_km": 1686.4,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "OAKB-UTTT",
+  "label": "KBL-TAS",
+  "distance_km": 744.1,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "UTTT-LTFM",
+  "label": "TAS-IST",
+  "distance_km": 3355.9,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "UTTT-OMDB",
+  "label": "TAS-DXB",
+  "distance_km": 2194.2,
+  "zones": [
+   "PZ-BRAVO"
+  ],
+  "hazards": []
+ },
+ {
+  "segment": "OAKB-OIIE",
+  "label": "KBL-IKA",
+  "distance_km": 1645.6,
+  "zones": [
+   "PZ-BRAVO"
+  ],
+  "hazards": []
+ },
+ {
+  "segment": "OIIE-OMDB",
+  "label": "IKA-DXB",
+  "distance_km": 1199.9,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "OIIE-LTFM",
+  "label": "IKA-IST",
+  "distance_km": 2052.4,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "OIIE-OTHH",
+  "label": "IKA-DOH",
+  "distance_km": 1128.7,
+  "zones": [
+   "RZ-CHARLIE"
+  ],
+  "hazards": [
+   "STORM-2"
+  ]
+ },
+ {
+  "segment": "OIIE-OKBK",
+  "label": "IKA-KWI",
+  "distance_km": 750.3,
+  "zones": [],
+  "hazards": []
+ },
+ {
+  "segment": "OIIE-UTTT",
+  "label": "IKA-TAS",
+  "distance_km": 1705.2,
+  "zones": [],
+  "hazards": []
+ }
+]

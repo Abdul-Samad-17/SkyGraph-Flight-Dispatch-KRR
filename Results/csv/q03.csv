@@ -1,0 +1,33 @@
+hazard,type,severity,active,segment
+"Volcanic ash plume Arabian Sea (fictional, expired)",VolcanicAsh,5,false,AMD-DXB
+"Volcanic ash plume Arabian Sea (fictional, expired)",VolcanicAsh,5,false,BOM-LHR
+"Volcanic ash plume Arabian Sea (fictional, expired)",VolcanicAsh,5,false,DXB-BKK
+Thunderstorm cell Punjab (fictional),Thunderstorm,4,true,ATQ-DXB
+Thunderstorm cell Punjab (fictional),Thunderstorm,4,true,DEL-FRA
+Thunderstorm cell Punjab (fictional),Thunderstorm,4,true,DEL-KBL
+Thunderstorm cell Punjab (fictional),Thunderstorm,4,true,DEL-LHR
+Thunderstorm cell Punjab (fictional),Thunderstorm,4,true,KHI-FSD
+Thunderstorm cell Punjab (fictional),Thunderstorm,4,true,LHE-AUH
+Thunderstorm cell Punjab (fictional),Thunderstorm,4,true,LHE-DOH
+Thunderstorm cell Punjab (fictional),Thunderstorm,4,true,LHE-DXB
+Thunderstorm cell Punjab (fictional),Thunderstorm,4,true,LHE-JED
+Thunderstorm cell Punjab (fictional),Thunderstorm,4,true,LHE-KHI
+Thunderstorm cell Punjab (fictional),Thunderstorm,4,true,LHE-MUX
+Thunderstorm cell Punjab (fictional),Thunderstorm,4,true,LHE-RUH
+Thunderstorm cell Punjab (fictional),Thunderstorm,4,true,LHE-SHJ
+Icing band Hindu Kush (fictional),Icing,3,true,ISB-CJL
+Icing band Hindu Kush (fictional),Icing,3,true,ISB-TAS
+Icing band Hindu Kush (fictional),Icing,3,true,PEW-CJL
+Thunderstorm line northern Gulf (fictional),Thunderstorm,3,true,BAH-KWI
+Thunderstorm line northern Gulf (fictional),Thunderstorm,3,true,BOM-LHR
+Thunderstorm line northern Gulf (fictional),Thunderstorm,3,true,DOH-KWI
+Thunderstorm line northern Gulf (fictional),Thunderstorm,3,true,DXB-CDG
+Thunderstorm line northern Gulf (fictional),Thunderstorm,3,true,DXB-FRA
+Thunderstorm line northern Gulf (fictional),Thunderstorm,3,true,DXB-IST
+Thunderstorm line northern Gulf (fictional),Thunderstorm,3,true,DXB-KWI
+Thunderstorm line northern Gulf (fictional),Thunderstorm,3,true,DXB-LHR
+Thunderstorm line northern Gulf (fictional),Thunderstorm,3,true,IKA-DOH
+Thunderstorm line northern Gulf (fictional),Thunderstorm,3,true,KHI-KWI
+Moderate turbulence Karakoram (fictional),Turbulence,2,true,ISB-GIL
+Moderate turbulence Karakoram (fictional),Turbulence,2,true,ISB-KDU
+Moderate turbulence Karakoram (fictional),Turbulence,2,true,KDU-GIL

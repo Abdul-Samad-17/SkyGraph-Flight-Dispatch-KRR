@@ -1,0 +1,14 @@
+PREFIX fd:   <https://krr.example.org/fd/ontology#>
+PREFIX fdr:  <https://krr.example.org/fd/data/>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+
+# CQ11 | INFERENCE (R1) + FILTER NOT EXISTS | Airports that can take the ATR 72 but NOT the A320 (runway between 1,333 m and 2,099 m)
+SELECT ?iata ?name ?longestRunway
+WHERE {
+  ?a fd:isSuitableFor fdr:aircraft-ATR72-600 ;
+     fd:iataCode ?iata ; rdfs:label ?name ; fd:longestRunwayM ?longestRunway .
+  FILTER NOT EXISTS { ?a fd:isSuitableFor fdr:aircraft-A320-200 }
+}
+ORDER BY ?iata

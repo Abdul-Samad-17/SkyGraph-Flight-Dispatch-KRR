@@ -1,0 +1,15 @@
+PREFIX fd:   <https://krr.example.org/fd/ontology#>
+PREFIX fdr:  <https://krr.example.org/fd/data/>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+
+# CQ3 | aggregation (COUNT, GROUP BY) | How many airports and runways does each country have?
+SELECT ?country (COUNT(DISTINCT ?a) AS ?airports) (COUNT(?r) AS ?runways)
+WHERE {
+  ?a fd:locatedIn ?c ;
+     fd:hasRunway ?r .
+  ?c rdfs:label ?country .
+}
+GROUP BY ?country
+ORDER BY DESC(?airports) ?country

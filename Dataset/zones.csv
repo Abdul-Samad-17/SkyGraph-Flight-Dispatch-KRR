@@ -1,0 +1,5 @@
+id,label,class,active,polygon_lonlat
+RZ-ALPHA,Restricted Zone Alpha (fictional naval exercise area),RestrictedZone,true,"61.0,23.0;63.6,23.0;63.6,25.4;61.0,25.4"
+PZ-BRAVO,Prohibited Zone Bravo (fictional),ProhibitedZone,true,"58.0,33.0;64.0,33.0;64.0,36.5;58.0,36.5"
+RZ-CHARLIE,"Restricted Zone Charlie (fictional, currently inactive)",RestrictedZone,false,"49.0,26.5;52.0,26.5;52.0,28.5;49.0,28.5"
+AZ-DELTA,"Advisory Area Delta (fictional, advisory only)",AdvisoryZone,true,"74.0,32.0;78.0,32.0;78.0,36.5;74.0,36.5"

@@ -1,0 +1,18 @@
+PREFIX fd:   <https://krr.example.org/fd/ontology#>
+PREFIX fdr:  <https://krr.example.org/fd/data/>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+
+# CQ6 | MULTI-HOP (hazard -> segment -> airport -> country) | Which countries have airports at the end of a segment affected by an ACTIVE hazard?
+SELECT ?country (COUNT(DISTINCT ?a) AS ?airportsAffected)
+WHERE {
+  ?h a fd:WeatherHazard ;
+     fd:isActive true .
+  ?s fd:affectedByHazard ?h .
+  { ?s fd:connectsFrom ?a } UNION { ?s fd:connectsTo ?a }
+  ?a fd:locatedIn ?c .
+  ?c rdfs:label ?country .
+}
+GROUP BY ?country
+ORDER BY DESC(?airportsAffected) ?country

@@ -1,0 +1,7 @@
+id,label,aircraft_id,remaining_range_km,current_lat,current_lon
+S1,Engine-out diversion: A380 over Arabian Sea,A380-800,1500,25.0,64.0
+S2,Weather diversion: ATR 72 near Chitral,ATR72-600,500,35.5,72.2
+S3,Low-fuel diversion: B737-800 over northern Gulf,B737-800,1200,27.5,50.8
+S4,Medical diversion: A320 over Eastern Turkey,A320-200,1500,38.5,40.0
+S5,Long-haul diversion: B787-9 over western Afghanistan,B787-9,2500,34.5,63.0
+S6,Edge case: A380 with 300 km remaining over open sea,A380-800,300,22.0,66.0

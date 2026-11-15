@@ -1,0 +1,105 @@
+@prefix fd:   <https://krr.example.org/fd/ontology#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+# =====================================================================
+# Dynamic Flight Dispatch & Weather Routing - T-Box (schema) - AI-3001
+# =====================================================================
+
+<https://krr.example.org/fd/ontology> a owl:Ontology ;
+    rdfs:label "Dynamic Flight Dispatch & Weather Routing Ontology" ;
+    rdfs:comment "Encodes aircraft limits, airport suitability, airspace restrictions and weather hazards so infeasible reroutes can be eliminated by explicit rules before any path optimisation." ;
+    owl:versionInfo "1.0 (Iteration 1)" .
+
+# ---------------------------- CLASSES --------------------------------
+fd:Airport a owl:Class ; rdfs:label "Airport" ;
+    rdfs:comment "A civil aerodrome that can be the endpoint of a route segment." .
+fd:InternationalAirport a owl:Class ; rdfs:subClassOf fd:Airport ; rdfs:label "International airport" .
+fd:RegionalAirport a owl:Class ; rdfs:subClassOf fd:Airport ; rdfs:label "Regional airport" .
+fd:HubAirport a owl:Class ; rdfs:subClassOf fd:Airport ; rdfs:label "Hub airport" ;
+    rdfs:comment "INFERRED class: airport with at least 14 incident route segments (rule R6)." .
+fd:Runway a owl:Class ; rdfs:label "Runway" .
+fd:AircraftType a owl:Class ; rdfs:label "Aircraft type" .
+fd:WidebodyAircraft a owl:Class ; rdfs:subClassOf fd:AircraftType ; rdfs:label "Widebody aircraft" .
+fd:NarrowbodyAircraft a owl:Class ; rdfs:subClassOf fd:AircraftType ; rdfs:label "Narrowbody aircraft" .
+fd:TurbopropAircraft a owl:Class ; rdfs:subClassOf fd:AircraftType ; rdfs:label "Turboprop aircraft" .
+fd:RouteSegment a owl:Class ; rdfs:label "Route segment" ;
+    rdfs:comment "An undirected leg between two airports (stored once with a nominal from/to)." .
+fd:BlockedSegment a owl:Class ; rdfs:subClassOf fd:RouteSegment ; rdfs:label "Blocked segment" ;
+    rdfs:comment "INFERRED class: segment crossing an active restricted zone or an active hazard of severity >= 3 (rule R2)." .
+fd:AirspaceZone a owl:Class ; rdfs:label "Airspace zone" .
+fd:RestrictedZone a owl:Class ; rdfs:subClassOf fd:AirspaceZone ; rdfs:label "Restricted zone" .
+fd:ProhibitedZone a owl:Class ; rdfs:subClassOf fd:RestrictedZone ; rdfs:label "Prohibited zone" .
+fd:AdvisoryZone a owl:Class ; rdfs:subClassOf fd:AirspaceZone ; rdfs:label "Advisory zone" ;
+    rdfs:comment "Advisory areas never block a segment." .
+fd:WeatherHazard a owl:Class ; rdfs:label "Weather hazard" .
+fd:Country a owl:Class ; rdfs:label "Country" .
+fd:DispatchScenario a owl:Class ; rdfs:label "Dispatch scenario" ;
+    rdfs:comment "An in-flight diversion situation: aircraft, current position, remaining range." .
+fd:PositionDistance a owl:Class ; rdfs:label "Position-to-airport distance" ;
+    rdfs:comment "Reified precomputed great-circle distance from a scenario position to an airport." .
+
+# disjointness (schema-level constraints)
+fd:Airport owl:disjointWith fd:Runway , fd:AircraftType , fd:RouteSegment , fd:AirspaceZone , fd:WeatherHazard , fd:Country .
+fd:RouteSegment owl:disjointWith fd:AirspaceZone , fd:WeatherHazard .
+fd:AirspaceZone owl:disjointWith fd:WeatherHazard .
+
+# restrictions (existential constraints)
+fd:Airport rdfs:subClassOf [ a owl:Restriction ; owl:onProperty fd:hasRunway ; owl:someValuesFrom fd:Runway ] .
+fd:Airport rdfs:subClassOf [ a owl:Restriction ; owl:onProperty fd:locatedIn ; owl:someValuesFrom fd:Country ] .
+fd:RouteSegment rdfs:subClassOf [ a owl:Restriction ; owl:onProperty fd:connectsFrom ; owl:cardinality "1"^^xsd:nonNegativeInteger ] .
+fd:RouteSegment rdfs:subClassOf [ a owl:Restriction ; owl:onProperty fd:connectsTo ; owl:cardinality "1"^^xsd:nonNegativeInteger ] .
+fd:AircraftType rdfs:subClassOf [ a owl:Restriction ; owl:onProperty fd:rangeKm ; owl:cardinality "1"^^xsd:nonNegativeInteger ] .
+fd:AircraftType rdfs:subClassOf [ a owl:Restriction ; owl:onProperty fd:minRunwayM ; owl:cardinality "1"^^xsd:nonNegativeInteger ] .
+fd:DispatchScenario rdfs:subClassOf [ a owl:Restriction ; owl:onProperty fd:forAircraft ; owl:cardinality "1"^^xsd:nonNegativeInteger ] .
+
+# ------------------------ OBJECT PROPERTIES --------------------------
+fd:hasRunway a owl:ObjectProperty ; rdfs:label "has runway" ; rdfs:domain fd:Airport ; rdfs:range fd:Runway ; owl:inverseOf fd:runwayOf .
+fd:runwayOf a owl:ObjectProperty ; rdfs:label "runway of" ; rdfs:domain fd:Runway ; rdfs:range fd:Airport .
+fd:locatedIn a owl:ObjectProperty ; rdfs:label "located in" ; rdfs:domain fd:Airport ; rdfs:range fd:Country .
+fd:hasEndpoint a owl:ObjectProperty ; rdfs:label "has endpoint" ; rdfs:domain fd:RouteSegment ; rdfs:range fd:Airport .
+fd:connectsFrom a owl:ObjectProperty ; rdfs:label "connects from" ; rdfs:subPropertyOf fd:hasEndpoint ; rdfs:domain fd:RouteSegment ; rdfs:range fd:Airport .
+fd:connectsTo a owl:ObjectProperty ; rdfs:label "connects to" ; rdfs:subPropertyOf fd:hasEndpoint ; rdfs:domain fd:RouteSegment ; rdfs:range fd:Airport .
+fd:networkReachable a owl:ObjectProperty , owl:TransitiveProperty , owl:SymmetricProperty ; rdfs:label "network reachable" ; rdfs:domain fd:Airport ; rdfs:range fd:Airport .
+fd:connectedTo a owl:ObjectProperty , owl:SymmetricProperty ; rdfs:label "connected to" ; rdfs:subPropertyOf fd:networkReachable ; rdfs:domain fd:Airport ; rdfs:range fd:Airport .
+fd:crossesZone a owl:ObjectProperty ; rdfs:label "crosses zone" ; rdfs:domain fd:RouteSegment ; rdfs:range fd:AirspaceZone .
+fd:affectedByHazard a owl:ObjectProperty ; rdfs:label "affected by hazard" ; rdfs:domain fd:RouteSegment ; rdfs:range fd:WeatherHazard .
+fd:forAircraft a owl:ObjectProperty , owl:FunctionalProperty ; rdfs:label "for aircraft" ; rdfs:domain fd:DispatchScenario ; rdfs:range fd:AircraftType .
+fd:ofScenario a owl:ObjectProperty ; rdfs:label "of scenario" ; rdfs:domain fd:PositionDistance ; rdfs:range fd:DispatchScenario .
+fd:toAirport a owl:ObjectProperty ; rdfs:label "to airport" ; rdfs:domain fd:PositionDistance ; rdfs:range fd:Airport .
+# inferred (derived by rules R1-R5)
+fd:isSuitableFor a owl:ObjectProperty ; rdfs:label "is suitable for" ; rdfs:domain fd:Airport ; rdfs:range fd:AircraftType ;
+    rdfs:comment "INFERRED (R1): longest runway >= aircraft minimum runway." .
+fd:blockedBy a owl:ObjectProperty ; rdfs:label "blocked by" ; rdfs:domain fd:RouteSegment ;
+    rdfs:comment "INFERRED (R2): the active zone or hazard that blocks the segment." .
+fd:exceedsRangeOf a owl:ObjectProperty ; rdfs:label "exceeds range of" ; rdfs:domain fd:RouteSegment ; rdfs:range fd:AircraftType ;
+    rdfs:comment "INFERRED (R3): segment distance > aircraft maximum range." .
+fd:isFeasibleFor a owl:ObjectProperty ; rdfs:label "is feasible for" ; rdfs:domain fd:RouteSegment ; rdfs:range fd:AircraftType ;
+    rdfs:comment "INFERRED (R4): not blocked, within range, both endpoints operational and suitable." .
+fd:hasDiversionCandidate a owl:ObjectProperty ; rdfs:label "has diversion candidate" ; rdfs:domain fd:DispatchScenario ; rdfs:range fd:Airport ;
+    rdfs:comment "INFERRED (R5): suitable, operational airport within remaining range." .
+
+# ----------------------- DATATYPE PROPERTIES -------------------------
+fd:iataCode a owl:DatatypeProperty ; rdfs:label "IATA code" ; rdfs:domain fd:Airport ; rdfs:range xsd:string .
+fd:isoCode a owl:DatatypeProperty ; rdfs:label "ISO country code" ; rdfs:domain fd:Country ; rdfs:range xsd:string .
+fd:icaoCode a owl:DatatypeProperty ; rdfs:label "ICAO code" ; rdfs:domain fd:Airport ; rdfs:range xsd:string .
+fd:latitude a owl:DatatypeProperty ; rdfs:label "latitude" ; rdfs:domain fd:Airport ; rdfs:range xsd:decimal .
+fd:longitude a owl:DatatypeProperty ; rdfs:label "longitude" ; rdfs:domain fd:Airport ; rdfs:range xsd:decimal .
+fd:isOperational a owl:DatatypeProperty ; rdfs:label "is operational" ; rdfs:domain fd:Airport ; rdfs:range xsd:boolean .
+fd:longestRunwayM a owl:DatatypeProperty ; rdfs:label "longest runway (m)" ; rdfs:domain fd:Airport ; rdfs:range xsd:integer ;
+    rdfs:comment "INFERRED (R0): MAX over the airport's runway lengths." .
+fd:designator a owl:DatatypeProperty ; rdfs:label "runway designator" ; rdfs:domain fd:Runway ; rdfs:range xsd:string .
+fd:runwayLengthM a owl:DatatypeProperty ; rdfs:label "runway length (m)" ; rdfs:domain fd:Runway ; rdfs:range xsd:integer .
+fd:icaoTypeCode a owl:DatatypeProperty ; rdfs:label "ICAO type code" ; rdfs:domain fd:AircraftType ; rdfs:range xsd:string .
+fd:rangeKm a owl:DatatypeProperty ; rdfs:label "maximum range (km)" ; rdfs:domain fd:AircraftType ; rdfs:range xsd:integer .
+fd:minRunwayM a owl:DatatypeProperty ; rdfs:label "minimum runway (m)" ; rdfs:domain fd:AircraftType ; rdfs:range xsd:integer .
+fd:cruiseSpeedKmh a owl:DatatypeProperty ; rdfs:label "cruise speed (km/h)" ; rdfs:domain fd:AircraftType ; rdfs:range xsd:integer .
+fd:distanceKm a owl:DatatypeProperty ; rdfs:label "great-circle distance (km)" ; rdfs:range xsd:decimal .
+fd:isActive a owl:DatatypeProperty ; rdfs:label "is active" ; rdfs:range xsd:boolean .
+fd:severity a owl:DatatypeProperty ; rdfs:label "severity (1-5)" ; rdfs:domain fd:WeatherHazard ; rdfs:range xsd:integer .
+fd:hazardType a owl:DatatypeProperty ; rdfs:label "hazard type" ; rdfs:domain fd:WeatherHazard ; rdfs:range xsd:string .
+fd:remainingRangeKm a owl:DatatypeProperty ; rdfs:label "remaining range (km)" ; rdfs:domain fd:DispatchScenario ; rdfs:range xsd:integer .
+fd:currentLatitude a owl:DatatypeProperty ; rdfs:label "current latitude" ; rdfs:domain fd:DispatchScenario ; rdfs:range xsd:decimal .
+fd:currentLongitude a owl:DatatypeProperty ; rdfs:label "current longitude" ; rdfs:domain fd:DispatchScenario ; rdfs:range xsd:decimal .
