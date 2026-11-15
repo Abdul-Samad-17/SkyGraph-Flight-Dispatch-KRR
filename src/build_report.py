@@ -10,7 +10,6 @@ import generate_reports as gr
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.join(HERE, "..")
 RES = os.path.join(ROOT, "Results"); VIS = os.path.join(ROOT, "Visualization"); REP = os.path.join(ROOT, "Report")
-PH = "[fill in]"
 
 
 def table(doc, header, rows, widths=None, size=8.5):
@@ -66,8 +65,11 @@ def build(full):
     doc.add_heading(title, 0)
     para(doc, "Dynamic Flight Dispatch & Weather Routing Knowledge System (Transportation domain)", bold=True, size=12)
     table(doc, ["Item", "Details"], [
-        ["Team name", "TeamName  " + PH], ["Member 1", "Huzaifa Mudassar (24i-0050), FAST-NUCES Islamabad, section AI-5B"],
-        ["Member 2", PH], ["Member 3", PH], ["Iteration 1 deadline", "15 November 2026 (review and live demo)"],
+        ["Team name", "SkyGraph"],
+        ["Member 1", "Huzaifa Mudassar (24i-0050), FAST-NUCES Islamabad, section AI-5B"],
+        ["Member 2", "Abdul Samad (24i-0095), FAST-NUCES Islamabad, section AI-5B"],
+        ["Member 3", "Shaheed Khan (24i-0037), FAST-NUCES Islamabad, section AI-5B"],
+        ["Iteration 1 deadline", "15 November 2026 (review and live demo)"],
         ["Status", "Academic prototype - not intended for operational use"]], widths=[1.6, 5.0])
 
     doc.add_heading("1. Overview", 1)
@@ -170,8 +172,12 @@ def build(full):
                   "Segments are undirected but stored once -> connectedTo declared symmetric; queries use UNION / direction-agnostic paths so they work with or without reasoning.",
                   "SPARQL property paths do not support {n,m} -> bounded hops written as explicit sequences.",
                   "Test-driven fixes: automated tests caught two copilot parsing bugs (plural 'hazards', 'to X from Y' order) before delivery."])
-    para(doc, "Individual contributions (each member to complete):", bold=True)
-    table(doc, ["Member", "Contribution"], [["Huzaifa Mudassar (24i-0050)", PH], ["Member 2", PH], ["Member 3", PH]], widths=[2.4, 4.2])
+    para(doc, "Individual contributions:", bold=True)
+    table(doc, ["Member", "Contribution"], [
+        ["Huzaifa Mudassar (24i-0050)", "Domain Modeling & Ontology (T-Box): Conceptualized domain ontology in Protégé, established class hierarchies (Airport, AircraftType, RouteSegment, AirspaceZone, WeatherHazard), defined object/datatype properties, domain/range constraints, and disjointness axioms."],
+        ["Abdul Samad (24i-0095)", "Dataset Curation, ETL & RDF Knowledge Graph (A-Box): Curated airport, runway, and aircraft datasets, implemented spatial precomputations (haversine distances, polygon-segment intersection geometry), engineered URI scheme, generated 2,105+ RDF triples, and managed GraphDB repository setup."],
+        ["Shaheed Khan (24i-0037)", "SPARQL Query Engineering & Symbolic Reasoning: Authored 15 competency questions and CQ-to-KG mapping, implemented 16 SPARQL queries (filters, aggregations, property paths, negation, ASK), designed SPARQL Update inference rules (R0–R6), and validated inferred facts against baseline recomputations."]
+    ], widths=[2.4, 4.2])
     para(doc, "Automated testing: 27 unit/integration tests (python src/tests.py) cover data integrity, ontology requirements, rule correctness against an independent computation, "
               "negative cases (inactive zone, advisory zone, low-severity hazard, expired hazard, closed airport), routing edge cases and SPARQL file linting.")
 
